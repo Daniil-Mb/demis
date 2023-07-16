@@ -1,5 +1,5 @@
 <div class="news">
-    <h1 class="news__header">Новости</h1>
+    <h1 class="news__header">Последние новости</h1>
     <?php
     if (isset($news)) {
         foreach ($news as $info) {

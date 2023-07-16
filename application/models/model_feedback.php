@@ -12,8 +12,7 @@ class Model_Feedback extends Model
 
     public function validate_data($data)
     {
-        $feedback = [];
-        if (!empty($data['name'])){
+        if (!empty($data['name']) && preg_match('/^[a-zA-Zа-яА-ЯёЁ]+\s[a-zA-Zа-яА-ЯёЁ]+\s[a-zA-Zа-яА-ЯёЁ]+$/u', $data['name'])) {
             $feedback['data']['name'] = $data['name'];
         } else {
             $feedback['errors']['name'] = $this->message['name'];
@@ -25,13 +24,13 @@ class Model_Feedback extends Model
             $feedback['errors']['address'] = $this->message['address'];
         }
 
-        if (!empty($data['number'])){
+        if (!empty($data['number']) && strpos($data['number'], '8') === 0 && strlen($data['number']) === 11) {
             $feedback['data']['number'] = $data['number'];
         } else {
             $feedback['errors']['number'] = $this->message['number'];
         }
 
-        if (!empty($data['email'])){
+        if (!empty($data['email']) and strpos($data['email'], "@")){
             $feedback['data']['email'] = $data['email'];
         } else {
             $feedback['errors']['email'] = $this->message['email'];
