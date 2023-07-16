@@ -1,15 +1,23 @@
-<h1>Портфолио</h1>
-<p>
-<table>
-Все проекты в следующей таблице являются вымышленными, поэтому даже не пытайтесь перейти по приведенным ссылкам.
-<tr><td>Год</td><td>Проект</td><td>Описание</td></tr>
+<div class="news">
+    <h1 class="news__header">Новости</h1>
 <?php
-    if (isset($data)) {
-        foreach ($data as $row)
-        {
-            echo '<tr><td>' . $row['Year'] . '</td><td>' . $row['Site'] . '</td><td>' . $row['Description'] . '</td></tr>';
-        }
+if (isset($news)) {
+    foreach ($news as $info) {
+        ?>
+        <div class="news__contant">
+            <div class="news__top">
+                <h2 class="news__head"><?= $info[1] ?></h2>
+                <h3 class="news__date"><?= $info[3] ?></h3>
+            </div>
+            <p class="news__text"><?= $info[2] ?></p>
+        </div>
+        <?php
     }
+}
+else {
+    ?>
+    Новостей нет
+<?php
+}
 ?>
-</table>
-</p>
+</div>

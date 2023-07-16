@@ -11,8 +11,5 @@ class Model
         $this->connect = $connect;
     }
 
-    public function get_data($data)
-    {
-        return $data;
-    }
+
 }

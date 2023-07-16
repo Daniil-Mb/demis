@@ -16,9 +16,9 @@
                     <a href="#"><img src="img/logo.jpg" alt="logo" class="header__logo"></a>
                 </div> -->
                 <ul class="header__ul-menu">
-                    <li class="header__li"><a class="header__a" href="index.php">Главная</a></li>
-                    <li class="header__li"><a class="header__a" href="">Новости</a></li>
-                    <li class="header__li"><a class="header__a" href="contacts.html">Обратная связь</a></li>
+                    <li class="header__li"><a class="header__a" href="/main">Главная</a></li>
+                    <li class="header__li"><a class="header__a" href="/news">Новости</a></li>
+                    <li class="header__li"><a class="header__a" href="/feedback ">Обратная связь</a></li>
                 </ul>
             </nav>
         </div>
