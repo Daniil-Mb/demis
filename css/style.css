@@ -1,0 +1,355 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(149, 0, 0);
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: #000;
+}
+
+.header {
+  position: fixed;
+  z-index: 2000;
+  background-color: rgb(217, 26, 26);
+  top: 0px;
+  max-height: 128px;
+  padding-top: 5px;
+  width: 100%;
+}
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header__ul-menu {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  width: 930px;
+  height: 26px;
+}
+.header__a {
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  line-height: 16px;
+  color: black;
+}
+
+.footer {
+  background-color: #fff;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.footer__icons {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25px;
+  margin-right: auto;
+  width: clamp(14.375rem, 12.708rem + 8.33vw, 20rem);
+}
+.footer__icon {
+  width: clamp(1.25rem, 0.194rem + 5.28vw, 4.813rem);
+  height: clamp(1.25rem, 0.194rem + 5.28vw, 4.813rem);
+}
+.footer__last-logo {
+  width: clamp(15.625rem, 11.162rem + 22.31vw, 30.688rem);
+  height: auto;
+}
+.footer__mail {
+  margin-left: auto;
+  margin-right: 0em;
+  font-family: "Rubik Wet Paint";
+  color: #000;
+  font-size: clamp(0.438rem, 0.012rem + 2.13vw, 1.875rem);
+  line-height: 16px;
+}
+.footer__end {
+  max-width: 645px;
+  height: auto;
+  margin: auto;
+}
+.footer__text {
+  font-family: "Rubik Wet Paint";
+  font-size: clamp(1.25rem, 0.88rem + 1.85vw, 2.5rem);
+  line-height: 16px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.portfolio-photo__header {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  height: clamp(3.125rem, 0.921rem + 11.02vw, 10.563rem);
+  margin: auto;
+}
+.portfolio-photo__h2 {
+  font-size: clamp(1.25rem, 0.731rem + 2.59vw, 3rem);
+  line-height: 80px;
+  margin: auto;
+}
+.portfolio-photo__jop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+.portfolio-photo__column {
+  flex: 25%;
+  padding: 0 4px;
+  text-align: center;
+}
+.portfolio-photo__photo {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 50%; /* занимает 75% общей ширины */
+}
+
+/* Элементы левой колонки: адрес, телефон, email */
+.details {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Общие стили для иконок */
+.details i {
+  font-size: 25px; /* задаем размер */
+  color: #3e2093; /* задаем цвет */
+  margin-bottom: 10px;
+}
+
+/* Стили для заголовков левой колонки */
+.topic {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 7px; /* отступ снизу 7px */
+}
+
+/* Стили для текста левой колонки */
+.text-one,
+.text-two {
+  font-size: 14px;
+  color: #afafb6;
+}
+
+/* Заголовок правой колонки */
+.topic-text {
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Текст правой колонки */
+.form p {
+  margin-bottom: 20px;
+}
+
+/* Контейнер для input'ов формы */
+.input-box {
+  height: 50px; /* по сути задаем высоту input'а */
+  width: 100%; /* ширина на всю ширину правой колонки (с учетом padding) */
+  margin-bottom: 20px; /* отступаем снизу 20px */
+}
+
+/* Стили для input и textarea (поле сообщение) */
+.input-box input,
+.input-box textarea {
+  height: 100%; /* растягиваем на всю высоту контейнера 50px */
+  width: 100%; /* растягиваем на всю ширину */
+  border: none; /* убираем внешние края */
+  border-radius: 5px; /* скругляем края */
+  background: #f0f1f8; /* задаем цвет фона */
+  padding: 0 20px; /* отступ справа и слева 20px */
+}
+
+/* Отдельно стилизуем поле сообщение */
+.input-box textarea {
+  resize: none; /* чтобы нельзя было менять высоту */
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Стили для контейнера кнопки */
+.button {
+  display: inline-block; /* делаем блочно-строчный элемент */
+}
+
+/* Стили для самой кнопки */
+.button input[type=button] {
+  color: #fff;
+  font-size: 18px;
+  background: #ba1735;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 7px;
+  transition: 0.2s; /* чтобы плавно менялся цвет при наведении (:hover) */
+}
+
+/* Меняем цвет фона при наведении на кнопку */
+.button input[type=button]:hover {
+  background: #afafb6;
+}
+
+.table {
+  margin: auto;
+  margin-top: 20px;
+  width: 50%;
+  margin-bottom: 20px;
+  border: 15px solid #F2F8F8;
+  border-top: 5px solid #F2F8F8;
+  border-collapse: collapse;
+}
+
+.table th {
+  font-weight: bold;
+  padding: 5px;
+  background: #f0f1f8;
+  border: none;
+  border-bottom: 5px solid #F2F8F8;
+}
+
+.table td {
+  padding: 5px;
+  border: none;
+  border-bottom: 5px solid #F2F8F8;
+}
+
+/* Меняем стили при ширине экрана меньше 800px */
+@media (max-width: 800px) {
+  /* Теперь форма (правая колонка) будет сверху, а элементы (левая колонка) снизу */
+  .feedback {
+    height: 100%;
+    flex-direction: column-reverse; /* располагаем в колонку и реверсивно */
+  }
+  .details {
+    margin-right: 20px;
+  }
+  .details:last-child {
+    margin-right: 0;
+  }
+  /* Правая колонка теперь на всю ширину и не имеет отступа слева */
+  .form {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  padding-top: clamp(6.25rem, 5.731rem + 2.59vw, 8rem);
+  flex: 1 1 auto;
+  background-color: #f8f8f3;
+}
+
+.container {
+  max-width: 1430px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  min-height: 100%;
+  padding: 0px 15px;
+}
+button {
+  font-size: 15px;
+  background-color: #ba1735;
+  padding: 10px 20px 10px 20px;
+}
