@@ -1,5 +1,4 @@
 <?php
-require_once './config/connect.php';
 
 class Model_Feedback extends Model
 {
@@ -40,7 +39,6 @@ class Model_Feedback extends Model
     }
 
     public function save_data($data){
-        require_once './config/connect.php';
         $stmt = $this->connect->prepare("INSERT INTO feedback (id, name, address, number, email) VALUES (NULL, ?, ?, ?, ?)");
         $stmt->bind_param("ssss", $data['name'], $data['address'], $data['number'], $data['email']);
         $stmt->execute();
